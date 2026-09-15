@@ -34,8 +34,8 @@ def sort_names(names, scores):
     This function takes an array of names and scores, and returns
     an array of students' names in descending order.
     '''
-    sorted_names = [(n, s) for n, s in zip(names, scores)]
-    sorted_names.sort(reverse=True, key=lambda x : x[1])
+    ns_zip = [(n, s) for n, s in zip(names, scores)]
+    ns_zip.sort(reverse=True, key=lambda x : x[1])
     sorted_names = [name[0] for name in ns_zip]
 
     return (sorted_names)
