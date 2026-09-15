@@ -23,7 +23,21 @@ def ways(n):
 
 
 def lowest_score(names, scores):
-    return None
+    '''
+    This function takes an array of names and scores, and returns
+    the name of the student with the lowest score.
+    '''
+    lowest_score_name = names[np.argmin(scores)]
+
+    return(lowest_score_name)
+
 
 def sort_names(names, scores):
-    return None
+    '''
+    This function takes an array of names and scores, and returns
+    an array of students' names in descending order.
+    '''
+    sorted_names = [(n, s) for n, s in zip(names, scores)]
+    sorted_names.sort(reverse=True, key=lambda x : x[1])
+
+    return (sorted_names)
