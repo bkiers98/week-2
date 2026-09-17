@@ -11,12 +11,12 @@ def ways(n):
     num_ways = 0
     coin_combos = []
 
-    for nickel in range(0, n+1, 5):
+    for nickel in range(0, n + 1, 5):
         combo = (int(nickel / 5), n - nickel)
         coin_combos.append(combo)
 
     num_ways = len(coin_combos)
-    return (num_ways)
+    return num_ways
 
 
 def lowest_score(names, scores):
@@ -26,7 +26,7 @@ def lowest_score(names, scores):
     '''
     lowest_score_name = names[np.argmin(scores)]
 
-    return(lowest_score_name)
+    return lowest_score_name
 
 
 def sort_names(names, scores):
@@ -35,7 +35,7 @@ def sort_names(names, scores):
     an array of students' names in descending order.
     '''
     ns_zip = [(n, s) for n, s in zip(names, scores)]
-    ns_zip.sort(reverse=True, key=lambda x : x[1])
+    ns_zip.sort(reverse=True, key=lambda x: x[1])
     sorted_names = [name[0] for name in ns_zip]
 
-    return (sorted_names)
+    return sorted_names
